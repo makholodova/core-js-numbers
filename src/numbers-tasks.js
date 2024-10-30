@@ -327,8 +327,14 @@ function getSumOfDigits(num) {
  *   16  => true
  *   15  => false
  */
-function isPowerOfTwo(/* num */) {
-  throw new Error('Not implemented');
+function isPowerOfTwo(num) {
+  let res = num;
+  while (res !== 1) {
+    if (res % 2 === 0) {
+      res /= 2;
+    } else return false;
+  }
+  return true;
 }
 
 /**
@@ -356,8 +362,8 @@ function getSine(num) {
  * 255, 16 => 'ff'
  * 2, 2    => '10'
  */
-function numberToStringInBase(/* number, base */) {
-  throw new Error('Not implemented');
+function numberToStringInBase(number, base) {
+  return number.toString(base);
 }
 
 /**
